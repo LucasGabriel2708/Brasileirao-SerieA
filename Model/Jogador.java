@@ -30,5 +30,10 @@ public class Jogador {
    public int getIdJogador() {
       return id;
    }
-    
+
+   @Override
+   public String toString() {
+      return "Jogador [id=" + id + ", nome=" + nome + ", posicao=" + posicao + ", numero=" + numero + ", time=" + time
+            + "]";
+   }   
 }

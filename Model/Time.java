@@ -1,6 +1,6 @@
 package Model;
 
-import java.sql.Array;
+
 import java.util.ArrayList;
 
 public class Time{
@@ -35,12 +35,20 @@ public class Time{
 	}
 
 // REMOVE ALGUM JOGADOR DA LISTA
-   public void removerJogador(int jogador_excluido){
+   public void removerJogador(int idjogador_excluido){
       for (Jogador j: todos_jogadores){
-         if (j.getIdJogador().equals(jogador_excluido)){
+         if (j.getIdJogador() == idjogador_excluido){
             todos_jogadores.remove(j);
          }
       }
+   }
+   public int getIdTime(){
+      return id;
+   }
+   @Override
+   public String toString() {
+      return "Time [id=" + id + ", nome=" + nome + ", tecnico=" + tecnico + ", todos_jogadores=" + todos_jogadores
+            + "]";
    }
 }
 
