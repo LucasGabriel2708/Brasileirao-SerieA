@@ -20,13 +20,20 @@ public class Partida {
       this.golsVisitante = golsVisitante;
    }
 
-   public void setGolsVisitante(int gols){
-      this.golsVisitante = golsVisitante;
+   public void setGolsVisitante(int golsVist){
+      this.golsVisitante = golsVist;
    }
 
-   public void setGolsMandante(int gols){
-      this.golsMandante = golsMandante;
+   public void setGolsMandante(int golsMand){
+      this.golsMandante = golsMand;
+   }
+   public int getIdPartida(){
+      return id;
    }
 
-    
+   @Override
+   public String toString() {
+      return "Partida [id=" + id + ", data=" + data + ", mandante=" + mandante + ", visitante=" + visitante
+            + ", golsMandante=" + golsMandante + ", golsVisitante=" + golsVisitante + "]";
+   }  
 }
